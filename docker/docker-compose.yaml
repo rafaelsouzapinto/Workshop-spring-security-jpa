@@ -1,0 +1,14 @@
+version: "3.8"
+
+services: #listagem com os serviços da aplicação
+ mysql:
+  image: mysql #imagem do programa desejado
+  ports:
+  - "3306:3306" #bind que relaciona a porta do computador com a do container
+  expose:
+  - "3306" #expor a seguinte porta para fora do container para ser acessável
+  environment:
+  - MYSQL_USER=admin
+  - MYSQL_PASSWORD=123
+  - MYSQL_DATABASE=mydb
+  - MYSQL_ROOT_PASSWORD=123
